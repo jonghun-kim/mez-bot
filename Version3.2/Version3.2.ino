@@ -16,8 +16,8 @@
 void setup() {
   Serial.begin(9600);
   // 모터 설정
-  pinMode(MOTOR_A_PWM, OUTPUT);
-  pinMode(MOTOR_B_PWM, OUTPUT);
+  pinMode(MOTOR_A_DIRECTION, OUTPUT);
+  pinMode(MOTOR_B_DIRECTION, OUTPUT);
 
   // 초음파 센서 설정
   pinMode(TRIG_F, OUTPUT);
@@ -89,19 +89,19 @@ void Right() {
   digitalWrite(MOTOR_A_DIRECTION, HIGH);
   digitalWrite(MOTOR_B_DIRECTION, LOW);
   analogWrite(MOTOR_A_SPEED, MOTOR_SPEED);
-  analogWrite(MOTOR_B_SPEED, MOTOR_SPEED)
+  analogWrite(MOTOR_B_SPEED, MOTOR_SPEED);
 }
 
 void Back() {
   digitalWrite(MOTOR_A_DIRECTION, HIGH);
   digitalWrite(MOTOR_B_DIRECTION, HIGH);
   analogWrite(MOTOR_A_SPEED, MOTOR_SPEED);
-  analogWrite(MOTOR_B_SPEED, MOTOR_SPEED)
+  analogWrite(MOTOR_B_SPEED, MOTOR_SPEED);
 }
 
 void Stop() {
   digitalWrite(MOTOR_A_DIRECTION, HIGH);
   digitalWrite(MOTOR_B_DIRECTION, HIGH);
   analogWrite(MOTOR_A_SPEED, 0);
-  analogWrite(MOTOR_B_SPEED, 0)
+  analogWrite(MOTOR_B_SPEED, 0);
 }
